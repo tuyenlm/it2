@@ -28,10 +28,10 @@
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
      -->
 
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-   
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.material.css">
 </head>
 
 <body>
@@ -43,7 +43,12 @@
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
-            <p>Left panel content goes here</p>
+            <div class="list-group">
+                <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+                <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Library</a>
+                <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Applications</a>
+                <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a>
+            </div>
         </div>
     </div>
 
@@ -51,32 +56,107 @@
     <div class="views">
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-            <!-- Top Navbar-->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="left">
-                        <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-                    </div>
-                    <div class="center sliding">Awesome App</div>
-                    <div class="right">icon</div>
-                </div>
-            </div>
+
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through">
                 <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
+                <div data-page="index" class="page toolbar-fixed navbar-fixed">
+                    <!-- Top Navbar-->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                            <div class="left">
+                                <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                                <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                            </div>
+                            <div class="center">IT2</div>
+                            <div class="right">
+                                <i class="fa fa-globe fa-lg pull-left " aria-hidden="true"></i>
+                                <i class="fa fa-comments fa-lg pull-right pull-left" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="toolbar tabbar tabbar-scrollable">
+                            <div class="toolbar-inner">
+                                <a href="#tab-1" class="tab-link active">Tab 1</a>
+                                <a href="#tab-2" class="tab-link">Tab 2</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Scrollable page content -->
                     <div class="page-content">
-                        <div class="content-block">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
+                        <!--<div class="content-block">-->
+                        <div class="tabs">
+                            <div id="tab-1" class="tab active">
+                                <div class="list-block tablet-inset list-block-margin-off">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+
+                                                <div class="item-inner">
+                                                    <div class="item-title">Item title</div>
+                                                    <div class="item-after">Label</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+                                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Item with badge</div>
+                                                    <div class="item-after"><span class="badge">5</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="item-link item-content">
+                                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Another item</div>
+                                                    <div class="item-after">Another label</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="list-block-label">List block label text goes here</div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab">
+                                <div class="content-block">
+                                    <p>This is tab 2 content</p>
+                                    <p>Ut ac lobortis lacus, non pellentesque arcu. Quisque sodales sapien malesuada, condimentum
+                                        nunc at, viverra lacus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                        nostra, per inceptos himenaeos. Vivamus eu pulvinar turpis, id tristique quam. Aenean
+                                        venenatis molestie diam, sit amet condimentum nisl pretium id. Donec diam tortor,
+                                        mollis in vehicula id, vehicula consectetur nulla. Quisque posuere rutrum mauris,
+                                        eu rutrum turpis blandit at. Proin volutpat tortor sit amet metus porttitor accumsan.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos. Ut dapibus posuere dictum.</p>
+                                    <p>Fusce luctus turpis nunc, id porta orci blandit eget. Aenean sodales quam nec diam varius,
+                                        in ornare ipsum condimentum. Aenean eleifend, nulla sit amet volutpat adipiscing,
+                                        ligula nulla pharetra risus, vitae consequat leo tortor eu nunc. Vivamus at fringilla
+                                        metus. Duis neque lectus, sagittis in volutpat a, pretium vel turpis. Nam accumsan
+                                        auctor libero, quis sodales felis faucibus quis. Etiam vestibulum sed nisl vel aliquet.
+                                        Aliquam pellentesque leo a lacus ultricies scelerisque. Vestibulum vestibulum fermentum
+                                        tincidunt. Proin eleifend metus non quam pretium, eu vehicula ipsum egestas. Nam
+                                        eget nibh enim. Etiam sem leo, pellentesque a elit vel, egestas rhoncus enim. Morbi
+                                        ultricies adipiscing tortor, vitae condimentum lacus hendrerit nec. Phasellus laoreet
+                                        leo quis purus elementum, ut fringilla justo eleifend. Nunc ultricies a sapien vitae
+                                        auctor. Aliquam id erat elementum, laoreet est et, dapibus ligula.</p>
+                                    <p>Ut ac lobortis lacus, non pellentesque arcu. Quisque sodales sapien malesuada, condimentum
+                                        nunc at, viverra lacus. Class aptent taciti sociosqu ad litora torquent per conubia
+                                        nostra, per inceptos himenaeos. Vivamus eu pulvinar turpis, id tristique quam. Aenean
+                                        venenatis molestie diam, sit amet condimentum nisl pretium id. Donec diam tortor,
+                                        mollis in vehicula id, vehicula consectetur nulla. Quisque posuere rutrum mauris,
+                                        eu rutrum turpis blandit at. Proin volutpat tortor sit amet metus porttitor accumsan.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos. Ut dapibus posuere dictum.</p>
+                                </div>
+                            </div>
                         </div>
+                        <!--</div>-->
                     </div>
                 </div>
             </div>

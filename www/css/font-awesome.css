@@ -2197,3 +2197,9 @@
   overflow: visible;
   clip: auto;
 }
+
+
+/*le minh tuyen 2016/06/09 */
+.fa-active {
+    color: #1d9d74;
+}

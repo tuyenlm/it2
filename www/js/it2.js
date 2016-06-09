@@ -1,7 +1,9 @@
 // Initialize app
-var myApp = new Framework7();
-
-
+var myApp = new Framework7({
+    // Enable Material theme for Android device only
+    material: true,
+    swipePanel: 'left'
+});
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
@@ -14,6 +16,7 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+    console.log(Framework7.prototype.device.ios);
 });
 
 
@@ -22,6 +25,7 @@ $$(document).on('deviceready', function() {
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
+    
 
 })
 
