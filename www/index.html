@@ -11,7 +11,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;img-src *">
+
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -20,6 +21,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
+
 
     <!-- Your app title -->
     <title>My App</title>
@@ -32,6 +34,8 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/styles.material.css">
+    <link rel="stylesheet" href="css/chat.normalize.css">
+    <link rel="stylesheet" href="css/chat.style.css">
 </head>
 
 <body>
@@ -137,7 +141,7 @@
                                 <div class="list-block tablet-inset list-block-margin-off">
                                     <ul>
                                         <li>
-                                            <a href="#" class="item-link item-content">
+                                            <a href="chat.html" class="item-link item-content">
                                                 <div class="item-media"><i class="icon icon-f7"></i></div>
                                                 <div class="item-inner">
                                                     <div class="item-title">Item with badge</div>

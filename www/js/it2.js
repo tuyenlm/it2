@@ -13,10 +13,12 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+
+
 // Handle Cordova Device Ready Event
-$$(document).on('deviceready', function() {
-    console.log("Device is ready!");
-    console.log(Framework7.prototype.device.ios);
+$$(document).on('deviceready', function () {
+    //console.log("Device is ready!");
+    //console.log(Framework7.prototype.device.ios);
 });
 
 
@@ -25,7 +27,7 @@ $$(document).on('deviceready', function() {
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
-    
+
 
 })
 
@@ -37,6 +39,60 @@ $$(document).on('pageInit', function (e) {
     if (page.name === 'about') {
         // Following code will be executed for page with data-page attribute equal to "about"
         myApp.alert('Here comes About page');
+    }
+
+    if (page.name === 'chat') {
+        // Following code will be executed for page with data-page attribute equal to "about"
+        //myApp.alert('Chat page');
+
+
+        // Conversation flag
+        var conversationStarted = false;
+
+        // Init Messages
+        var myMessages = myApp.messages('.messages', {
+            autoLayout: true
+        });
+
+        // Init Messagebar
+        var myMessagebar = myApp.messagebar('.messagebar');
+        // Handle message
+        $$('.messagebar .link').on('click', function () {
+            // Message text
+            var messageText = myMessagebar.value().trim();
+            // Exit if empy message
+            if (messageText.length === 0) return;
+
+            // Empty messagebar
+            myMessagebar.clear()
+
+            // Random message type
+            var messageType = (['sent', 'received'])[Math.round(Math.random())];
+
+            // Avatar and name for received message
+            var avatar, name;
+            if (messageType === 'received') {
+                avatar = '../www/images/profiles/profile-80_4.jpg';
+                name = 'takayama';
+            }
+            // Add message
+            myMessages.addMessage({
+                // Message text
+                text: messageText,
+                // Random message type
+                type: messageType,
+                // Avatar and name:
+                avatar: avatar,
+                name: name,
+                // Day
+                day: !conversationStarted ? 'Today' : false,
+                time: !conversationStarted ? (new Date()).getHours() + ':' + (new Date()).getMinutes() : false
+            })
+
+            // Update conversation flag
+            conversationStarted = true;
+        });
+
     }
 })
 

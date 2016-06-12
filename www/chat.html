@@ -1,0 +1,66 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+<div class="view chat-view">
+    <div class="pages navbar-through toolbar-through">
+        <div data-page="chat" class="page toolbar-fixed navbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="left">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                    <div class="center" style="margin:0px !important">
+                        <div style="">
+                            <div style="background-image:url(../www/images/profiles/profile-80_4.jpg); margin-top:0px; float:left"
+                                class="message-avatar"></div>
+                                <div class="message-name-custome">takayama</div>
+                                <div class="message-status"><i class="fa fa-circle fa-lg fa-circle-online" aria-hidden="true"></i> online</div>
+                        </div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+
+            <div class="toolbar messagebar">
+                <div class="toolbar-inner">
+                    <textarea placeholder="Message" class=""></textarea><a href="#" class="link message-submit">Send</a>
+                </div>
+            </div>
+            <div class="page-content messages-content">
+                <div class="messages">
+                    <div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>
+                    <div class="message message-sent">
+                        <div class="message-text">Hello</div>
+                        <div style="background-image:url(../www/images/profiles/profile-80_4.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="message message-sent">
+                        <div class="message-text">How are you?</div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">I am fine, thanks</div>
+                        <div style="background-image:url(../www/images/profiles/profile-80_4.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>
+                    <div class="message message-sent">
+                        <div class="message-text">Nice photo?</div>
+                    </div>
+                    <div class="message message-sent message-pic">
+                        <div class="message-text"><img src=""></div>
+                        <div class="message-label">Delivered</div>
+                    </div>
+                    <div class="message message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(../www/images/profiles/profile-80_4.jpg)" class="message-avatar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+
+        </div>
+    </div>
+</div>

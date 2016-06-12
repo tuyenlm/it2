@@ -1,0 +1,27 @@
+.message-name-custome {
+  float: left;
+  line-height: 30px;
+  font-size: 13px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+.message-status{
+  line-height: 10px;
+  font-size: 14px;
+  margin-left: 54px;
+  white-space: normal;
+}
+.message-submit{
+    padding: 6px 10px;
+    border-radius: 10px;
+    color: #fff !important;
+    border: none;
+    font-size: 13px;
+    background: #248A52;
+    height: 36px !important;
+    line-height: 36px !important;
+    margin: auto 10px auto auto;
+}
+.message-submit:hover {
+    background: #1D7745;
+}
